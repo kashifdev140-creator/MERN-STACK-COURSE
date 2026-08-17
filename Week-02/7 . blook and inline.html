@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Units, Display & Spacing Guide</title>
+  <style>
+    /* Base setup */
+    html {
+      font-size: 16px; /* 1rem = 16px */
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border: 2px solid #333;
+      border-radius: 8px;
+      
+      /* PADDING: Box ke ANDAR ki space */
+      padding: 20px;
+      
+      /* MARGIN: Box ke BAHAR ki space */
+      margin-bottom: 30px;
+    }
+
+    /* --- BLOCK vs INLINE STYLES --- */
+    .block-element {
+      display: block;
+      background-color: #ff7675;
+      color: white;
+      padding: 10px;
+      margin-bottom: 10px;
+      /* Block elements poori line cover karte hain (width: 100%) */
+    }
+
+    .inline-element {
+      display: inline;
+      background-color: #74b9ff;
+      color: white;
+      padding: 5px 10px;
+      /* Inline elements utni hi jagah lete hain jitna unka content hota hai */
+    }
+
+    /* --- CSS UNITS STYLES --- */
+    .box-px {
+      width: 300px; /* Fixed size */
+      background-color: #ffeaa7;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+
+    .box-percent {
+      width: 50%; /* Screen/Parent container ka 50% */
+      background-color: #81ecec;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+
+    .text-rem {
+      font-size: 2rem; /* 2 * 16px = 32px */
+      color: #d63031;
+    }
+
+    .box-vh {
+      height: 15vh; /* Screen ki height ka 15% */
+      background-color: #a29bfe;
+      color: white;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Guide: Block, Inline, Spacing & Units</h1>
+
+  <!-- 1. Block vs Inline Section -->
+  <div class="card">
+    <h2>1. Block vs Inline Elements</h2>
+
+    <!-- Block Elements Example -->
+    <div class="block-element">Block Element 1 (&lt;div&gt;)</div>
+    <div class="block-element">Block Element 2 (&lt;p&gt;, &lt;h1&gt;)</div>
+    <p><i>Note: Block elements naye line se shuru hote hain aur poori width lete hain.</i></p>
+
+    <hr style="margin: 20px 0;">
+
+    <!-- Inline Elements Example -->
+    <p>
+      Yeh ek normal sentence hai jisme 
+      <span class="inline-element">Inline 1 (&lt;span&gt;)</span> aur 
+      <span class="inline-element">Inline 2 (&lt;a&gt;)</span> 
+      ek hi line mein sath chalte hain.
+    </p>
+    <p><i>Note: Inline elements nayi line nahi banate aur sirf apna zaroorat jitna space lete hain.</i></p>
+  </div>
+
+  <!-- 2. Padding vs Margin Section -->
+  <div class="card">
+    <h2>2. Padding vs Margin</h2>
+    <p>Is card mein <b>Padding (20px)</b> ne andar ke content ko border se door rakha hai, aur <b>Margin (30px)</b> ne do cards ke beech mein space banaya hai.</p>
+  </div>
+
+  <!-- 3. CSS Units Section -->
+  <div class="card">
+    <h2>3. CSS Units (px, %, rem, vh)</h2>
+
+    <div class="box-px">
+      <b>300px Width:</b> Fixed size (hamesha 300px rahega).
+    </div>
+
+    <div class="box-percent">
+      <b>50% Width:</b> Screen ke hisab se resize hota hai.
+    </div>
+
+    <p class="text-rem"><b>2rem Text:</b> Base size (16px) * 2 = 32px.</p>
+
+    <div class="box-vh">
+      <b>15vh Height:</b> Screen ki height ka 15% hissa.
+    </div>
+  </div>
+
+</body>
+</html>
